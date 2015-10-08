@@ -1,0 +1,70 @@
+.btn-orange {
+  background-color: #F98468;
+  border: 1px solid #F9734B;
+  color: #FFFFFF; }
+
+.btn-blue {
+  background-color: #2190C1;
+  color: #FFFFFF; }
+
+header {
+  height: 81px;
+  padding: 0 !important;
+  border-bottom: 1px solid #d7d9da;
+  font-family: 'Ubuntu', Verdana, serif;
+  color: #555C64; }
+  header #logo {
+    padding: 0; }
+    header #logo img {
+      margin: 0 auto; }
+  header #menu {
+    padding: 0;
+    height: inherit; }
+    header #menu #menu-items li {
+      float: left;
+      width: 13%;
+      margin-right: 5%;
+      text-align: center;
+      line-height: 81px;
+      font-size: 0.9em; }
+      header #menu #menu-items li:hover {
+        color: #C5F4FF;
+        background: url("../../images/menu_hover.png") no-repeat;
+        background-size: 100% 100%; }
+    header #menu #blog {
+      position: absolute;
+      width: 64px;
+      height: 24px;
+      margin: 0 4% 0 4%;
+      padding: 0;
+      top: 50%;
+      transform: translateY(-50%); }
+  header #search {
+    position: relative;
+    padding: 0;
+    font-size: 0.8em;
+    height: 81px; }
+    header #search #search-form {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%; }
+      header #search #search-form #search-field {
+        height: 36px;
+        margin-right: 2%;
+        vertical-align: top;
+        border: none;
+        text-align: right;
+        width: 100px; }
+        header #search #search-form #search-field::-webkit-input-placeholder {
+          color: #555C64; }
+        header #search #search-form #search-field:-moz-placeholder {
+          color: #555C64;
+          opacity: 1; }
+        header #search #search-form #search-field::-moz-placeholder {
+          color: #555C64;
+          opacity: 1; }
+        header #search #search-form #search-field :-ms-input-placeholder {
+          color: #555C64; }
+
+/*# sourceMappingURL=header.css.map */

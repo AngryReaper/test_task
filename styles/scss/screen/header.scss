@@ -1,0 +1,89 @@
+$text_color_blue_0: #C5F4FF;
+$color_orange_0: #F98468;
+$color_orange_1: #F9734B;
+$color_blue_0: #2190C1;
+$text_color_white_0: #FFFFFF;
+.btn-orange {
+  background-color: $color_orange_0;
+  border: 1px solid $color_orange_1;
+  color: $text_color_white_0;
+}
+.btn-blue {
+  background-color: $color_blue_0;
+  color: $text_color_white_0;
+}
+header {
+  height: 81px;
+  padding: 0 !important;
+  border-bottom: 1px solid #d7d9da;
+  font-family: 'Ubuntu', Verdana, serif;
+  color: #555C64;
+  #logo {
+    padding: 0;
+    img {
+    margin: 0 auto;
+    }
+  }
+  #menu {
+    padding: 0;
+    height: inherit;
+    #menu-items {
+      li {
+        float: left;
+        width: 13%;
+        margin-right: 5%;
+        text-align: center;
+        line-height: 81px;
+        font-size: 0.9em;
+        &:hover {
+          color: $text_color_blue_0;
+          background: url("../../images/menu_hover.png") no-repeat;
+          background-size: 100% 100%;
+        }
+      }
+    }
+    #blog {
+      position: absolute;
+      width: 64px;
+      height: 24px;
+      margin: 0 4% 0 4%;
+      padding: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  #search {
+    position: relative;
+    padding: 0;
+    font-size: 0.8em;
+    height: 81px;
+    #search-form {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      #search-field {
+        height: 36px;
+        margin-right: 2%;
+        vertical-align: top;
+        border: none;
+        text-align: right;
+        width: 100px;
+        &::-webkit-input-placeholder {
+          color: #555C64;
+        }
+        &:-moz-placeholder {
+          color: #555C64;
+          opacity:  1;
+        }
+        &::-moz-placeholder {
+          color: #555C64;
+          opacity:  1;
+        }
+        :-ms-input-placeholder {
+          color: #555C64;
+        }
+      }
+    }
+  }
+}

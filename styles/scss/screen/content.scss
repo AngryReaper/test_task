@@ -1,0 +1,86 @@
+$text_color_gray_0: #C9CBCB;
+$text_color_gray_1: #515862;
+$text_color_gray_2: #6E747B;
+$text_color_yellow_0: #FFEBCA;
+$text_color_blue_1: #429FCD;
+$color_gray_0: #F4F4F4;
+#slider {
+  position: relative;
+  height: 490px;
+  background: url("../../images/slider.png") no-repeat;
+  background-size: 100% 100%;
+  padding: 0;
+  #slide {
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    top: 50%;
+    left: 25%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: $text_color_gray_0;
+    #design {
+      font-family: 'bebas_neuebold', Verdana, serif;
+      font-size: 4em;
+      text-transform: uppercase;
+      line-height: 1em;
+      padding-bottom: 10px;
+    }
+    #lorem {
+      font-family: 'Ubuntu', Verdana, serif;
+      font-size: 0.875em;
+      margin-bottom: 6%;
+    }
+    #learn {
+      text-transform: uppercase;
+      font-size: 1.7em;
+      line-height: 1em;
+      width: 35%;
+      height: 22%;
+      font-family: 'Ubuntu Condensed', Verdana, serif;
+      color: $text_color_yellow_0;
+    }
+  }
+  #our_services {
+    position: absolute;
+    z-index: 1;
+    cursor: default;
+    bottom: -3%;
+    width: 10%;
+    height: 7%;
+    left: 45%;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    line-height: 1em;
+    font-family: 'BebasNeue', Verdana, serif;
+    color: $text_color_white_0;
+  }
+}
+#c_background {
+  background-color: $color_gray_0;
+  padding: 0;
+  .container {
+    img {
+      margin: 25% auto 0;
+    }
+    h1 {
+      font-family: 'BreeSerif-Regular', Verdana, serif;
+      font-size: 1.1em;
+      text-align: center;
+      margin-top: 15%;
+      color: $text_color_gray_1;
+    }
+    p {
+      text-align: center;
+      font-family: 'Ubuntu', Verdana, serif;
+      font-size: 0.8em;
+      color: $text_color_gray_2;
+      width: 85%;
+      margin: 5% auto 15%;
+      a {
+        color: $text_color_blue_1;
+        text-decoration: none;
+      }
+    }
+  }
+}

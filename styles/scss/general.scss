@@ -1,0 +1,13 @@
+$text_color_white_transparent: rgba(255, 255, 255, 0.6);
+$text_color_blue: #000066;
+$text_color_orange: #FF8401;
+$text_color_violet: #060661;
+$text_lightgreen: #B7C5AB;
+$color_orange_0: #FF6704;
+$color_orange_1: #FF6429;
+
+@import 'screen/reset';
+@import 'screen/base';
+@import 'screen/header';
+@import 'screen/content';
+@import 'screen/footer';
