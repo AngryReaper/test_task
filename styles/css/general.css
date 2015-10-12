@@ -57,14 +57,11 @@ table {
   font-family: 'glyphicons-halflings-regular';
   src: url("../../fonts/glyphicons-halflings-regular.woff2"); }
 @font-face {
-  font-family: 'BreeSerif-Regular';
-  src: url("../../fonts/BreeSerif-Regular.otf"); }
-@font-face {
   font-family: 'BebasNeue';
   src: url("../../fonts/BebasNeue-Regular.otf") format("opentype");
   font-weight: normal; }
 @font-face {
-  font-family: 'bebas_neuebold';
+  font-family: 'BebasNeue-Bold';
   src: url("../../fonts/bebasneue-bold-webfont.eot");
   src: url("../../fonts/bebasneue-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/bebasneue-bold-webfont.woff2") format("woff2"), url("../../fonts/bebasneue-bold-webfont.woff") format("woff"), url("../../fonts/bebasneue-bold-webfont.ttf") format("truetype"), url("../../fonts/bebasneue-bold-webfont.svg#bebas_neuebold") format("svg");
   font-weight: normal;
@@ -81,12 +78,18 @@ body {
   font-family: Tahoma, Georgia, Verdana, Arial, sans-serif; }
 
 .container {
-  width: 1000px;
   padding: 0;
   float: none;
   position: relative;
   margin: 0 auto;
   min-height: 100%; }
+  @media screen and (min-width: 992px) {
+    .container {
+      width: 1000px; } }
+
+@media screen and (min-width: 768px) {
+  .collapse {
+    display: inline-block; } }
 
 .btn-orange {
   background-color: #F98468;
@@ -97,8 +100,38 @@ body {
   background-color: #2190C1;
   color: #FFFFFF; }
 
+@media (max-width: 767px) {
+  .navbar {
+    position: absolute;
+    width: 70%;
+    top: 20%;
+    z-index: 11000; }
+
+  .navbar-nav {
+    margin: 0;
+    background-color: white; }
+
+  .navbar-header {
+    float: none; }
+
+  .navbar-toggle {
+    margin-left: 2%;
+    display: block;
+    float: left;
+    background-color: #F98468; }
+    .navbar-toggle .icon-bar {
+      background-color: white; }
+
+  .navbar-nav > li {
+    float: none !important;
+    display: block;
+    line-height: 40px !important;
+    margin-left: 5%; }
+
+  .navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px; } }
 header {
-  height: 81px;
   padding: 0 !important;
   border-bottom: 1px solid #d7d9da;
   font-family: 'Ubuntu', Verdana, serif;
@@ -109,18 +142,32 @@ header {
       margin: 0 auto; }
   header #menu {
     padding: 0;
-    height: inherit; }
-    header #menu #menu-items li {
-      float: left;
-      width: 13%;
-      margin-right: 5%;
-      text-align: center;
-      line-height: 81px;
-      font-size: 0.9em; }
-      header #menu #menu-items li:hover {
-        color: #C5F4FF;
-        background: url("../../images/menu_hover.png") no-repeat;
-        background-size: 100% 100%; }
+    height: 81px; }
+    header #menu .navbar .collapse {
+      width: 100%;
+      padding: 0; }
+      header #menu .navbar .collapse #menu-items {
+        float: none; }
+        header #menu .navbar .collapse #menu-items li {
+          float: left;
+          width: 13%;
+          margin-right: 5%;
+          text-align: center;
+          line-height: 81px;
+          font-size: 0.9em; }
+          header #menu .navbar .collapse #menu-items li:hover {
+            color: #C5F4FF;
+            background: url("../../images/menu_hover.png") no-repeat;
+            background-size: 100% 100%; }
+            header #menu .navbar .collapse #menu-items li:hover a {
+              color: #C5F4FF; }
+          header #menu .navbar .collapse #menu-items li a {
+            padding: 0;
+            display: inline-block;
+            color: #555C64;
+            text-decoration: none; }
+            header #menu .navbar .collapse #menu-items li a:hover {
+              background: url("../../images/menu_hover.png") no-repeat; }
     header #menu #blog {
       position: absolute;
       width: 64px;
@@ -128,7 +175,11 @@ header {
       margin: 0 4% 0 4%;
       padding: 0;
       top: 50%;
+      left: 72%;
       transform: translateY(-50%); }
+      @media screen and (max-width: 767px) {
+        header #menu #blog {
+          left: 50%; } }
   header #search {
     position: relative;
     padding: 0;
@@ -173,7 +224,7 @@ header {
     text-align: center;
     color: #C9CBCB; }
     #slider #slide #design {
-      font-family: 'bebas_neuebold', Verdana, serif;
+      font-family: 'BebasNeue-Bold','DIN Condensed','Ubuntu Condensed', serif;
       font-size: 4em;
       text-transform: uppercase;
       line-height: 1em;
@@ -190,6 +241,17 @@ header {
       height: 22%;
       font-family: 'Ubuntu Condensed', Verdana, serif;
       color: #FFEBCA; }
+    @media screen and (max-width: 767px) {
+      #slider #slide {
+        width: 90%;
+        left: 5%;
+        top: 30%; }
+        #slider #slide #learn {
+          font-size: 1.3em;
+          width: 45%; } }
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      #slider #slide #learn {
+        font-size: 1.2em; } }
   #slider #our_services {
     position: absolute;
     z-index: 1;
@@ -201,16 +263,26 @@ header {
     text-transform: uppercase;
     font-size: 1.5em;
     line-height: 1em;
-    font-family: 'BebasNeue', Verdana, serif;
+    font-family: 'BebasNeue','DIN Condensed','Ubuntu Condensed', serif;
     color: #FFFFFF; }
+    @media screen and (max-width: 767px) {
+      #slider #our_services {
+        width: 30%;
+        font-size: 1.1em;
+        left: 35%; } }
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      #slider #our_services {
+        font-size: 1em;
+        width: 12%;
+        left: 44%; } }
 
 #c_background {
   background-color: #F4F4F4;
   padding: 0; }
   #c_background .container img {
     margin: 25% auto 0; }
-  #c_background .container h1 {
-    font-family: 'BreeSerif-Regular', Verdana, serif;
+  #c_background .container h2 {
+    font-family: 'Bree Serif', Verdana, serif;
     font-size: 1.1em;
     text-align: center;
     margin-top: 15%;
@@ -225,5 +297,164 @@ header {
     #c_background .container p a {
       color: #429FCD;
       text-decoration: none; }
+
+#c_background2 {
+  background-color: #2E3E4D; }
+  #c_background2 #portfolio {
+    min-height: 1px;
+    margin: 7% 0 10%; }
+    #c_background2 #portfolio h1 {
+      float: left;
+      font-size: 2em;
+      font-family: 'Myriad Pro', 'Ubuntu', serif;
+      color: #F98468;
+      margin-left: 4%; }
+    #c_background2 #portfolio #more_works {
+      float: right;
+      margin-right: 4%; }
+    @media screen and (max-width: 767px) {
+      #c_background2 #portfolio h1 {
+        font-size: 1em; }
+      #c_background2 #portfolio #more_works {
+        margin-bottom: 4%; } }
+  #c_background2 .pic-cont {
+    padding-left: 2%;
+    margin-bottom: 10%; }
+    #c_background2 .pic-cont .pics {
+      border: 10px solid white; }
+    #c_background2 .pic-cont h2 {
+      color: #F98468;
+      font-family: 'Bree Serif', 'Ubuntu', serif;
+      font-size: 1.1em;
+      margin-top: 5%;
+      margin-bottom: 2%; }
+    #c_background2 .pic-cont p {
+      color: #848B91;
+      font-size: 0.75em;
+      font-family: 'Ubuntu', serif; }
+    @media screen and (max-width: 767px) {
+      #c_background2 .pic-cont h2 {
+        text-align: center; }
+      #c_background2 .pic-cont p {
+        text-align: justify; }
+      #c_background2 .pic-cont img {
+        margin: 0 auto; } }
+
+#c_background3 .container {
+  position: relative; }
+  @media screen and (min-width: 992px) {
+    #c_background3 .container {
+      margin-bottom: 2.5em; } }
+  #c_background3 .container #offer #offer-title {
+    color: #2291BD;
+    font-family: 'BebasNeue-Bold','DIN Condensed','Ubuntu Condensed', serif;
+    font-size: 3em;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 5% 0 3%; }
+  #c_background3 .container #offer #offer-post {
+    color: #515862;
+    font-family: 'Ubuntu', serif;
+    text-align: center;
+    font-size: 0.875em;
+    margin-bottom: 5%; }
+  #c_background3 .container #offer h2 {
+    color: #2C9AC7;
+    font-family: 'Bree Serif', 'Ubuntu', serif;
+    font-size: 1.1em; }
+  #c_background3 .container #offer .offer-block {
+    margin-top: 3%;
+    color: #515862;
+    font-family: 'Ubuntu', serif;
+    font-size: 0.8em; }
+    #c_background3 .container #offer .offer-block #details_1 {
+      margin-top: 5%;
+      float: right;
+      padding: 4px 8px; }
+    #c_background3 .container #offer .offer-block #details_2 {
+      color: #3BA0CA;
+      text-decoration: none; }
+    #c_background3 .container #offer .offer-block #details_3 {
+      margin-top: 5%;
+      float: right;
+      padding: 4px 8px;
+      border-bottom: 3px solid #005363; }
+    #c_background3 .container #offer .offer-block #details_4 {
+      color: #258194;
+      text-decoration: none; }
+  @media screen and (max-width: 991px) {
+    #c_background3 .container #offer .owb {
+      margin-bottom: 0.8em; } }
+  @media screen and (max-width: 767px) {
+    #c_background3 .container #offer .offers {
+      margin-bottom: 0.8em; } }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    #c_background3 .container #offer .offers {
+      margin-bottom: 4em; } }
+  @media screen and (max-width: 767px) {
+    #c_background3 .container #offer #offer-title {
+      margin-bottom: 5%; }
+    #c_background3 .container #offer #offer-post {
+      margin-bottom: 1.5em; }
+    #c_background3 .container #offer .owb, #c_background3 .container #offer .offers {
+      margin-bottom: 1.5em; } }
+
+footer {
+  background-color: #2E3E4D; }
+  footer .footer_block {
+    padding-right: 0;
+    margin-bottom: 5%;
+    margin-top: 5%; }
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      footer .footer_block {
+        height: 280px; } }
+    footer .footer_block h1 {
+      margin-bottom: 0.5em;
+      color: #F98468;
+      text-transform: uppercase;
+      font-size: 2em;
+      font-family: 'BebasNeue','DIN Condensed','Ubuntu Condensed', serif; }
+    footer .footer_block p {
+      color: #C9CBCB;
+      font-size: 0.8em;
+      font-family: 'Ubuntu', Verdana, serif;
+      border-bottom: 1px solid #556270;
+      padding: 0.8em 0 0.8em; }
+      footer .footer_block p a {
+        display: block;
+        color: #2190C1;
+        text-decoration: none; }
+      footer .footer_block p:last-child {
+        border: none; }
+    footer .footer_block #news {
+      border-bottom: 1px solid #556270; }
+    footer .footer_block .square {
+      height: 60px;
+      width: 60px;
+      background-color: white;
+      float: left;
+      margin-top: 0.8em;
+      margin-right: 0.8em; }
+    footer .footer_block .contacts {
+      padding-bottom: 1em;
+      border: none; }
+    footer .footer_block #phone, footer .footer_block #cell_phone, footer .footer_block #envelope {
+      width: 45px;
+      height: 45px;
+      float: left;
+      margin-top: 0.4em;
+      margin-right: 0.2em; }
+    footer .footer_block #phone {
+      background: url("../../images/phone.png"); }
+    footer .footer_block #cell_phone {
+      background: url("../../images/cell_phone.png"); }
+    footer .footer_block #envelope {
+      background: url("../../images/envelope.png"); }
+  footer #feeds {
+    padding-right: 10px; }
+  footer #newsletter {
+    padding-right: 45px; }
+  footer #recent {
+    padding-left: 0; }
 
 /*# sourceMappingURL=general.css.map */

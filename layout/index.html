@@ -2,75 +2,230 @@
 <html>
 <head>
   <title>Test task</title>
-  <script type="text/javascript" src="../js/jquery-2.1.4.js"></script>
-  <script type="text/javascript" src="../js/bootstrap.js"></script>
-  <link rel="stylesheet" type="text/css" href="../styles/css/bootstrap.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../js/instafeed.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../styles/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="../styles/css/general.css">
   <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<header class="col-md-12">
-<div class="col-md-4" id="logo"><img src="../images/logo.png" alt="Your logo" class="img-responsive"></div>
-<div class="col-md-5" id="menu">
-  <ul id="menu-items">
-    <li><a href="#">Home</a></li>
-    <li>Portfolio</li>
-    <li>About</li>
-    <li>Contact</li>
-  </ul>
-  <button class="btn btn-orange" id="blog">Blog</button>
-</div>
-<div class="col-md-3" id="search"><form id="search-form" action="" method="post"><input type="search" id="search-field" placeholder="Search" /><input type="image" id="search-button" src="../images/search_icon.png" /></form></div>
-</header>
-<div id="slider" class="col-md-12">
-  <div id="slide">
-    <p id="design">Good design is good business</p>
-    <p id="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies sagittis magnaa commodo.<br>
-Ut eget eros mauris, ut cursus urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.</p>
-    <button class="btn btn-orange" id="learn">Learn More</button>
+  <header class="col-md-12 col-sm-12 col-xs-12">
+    <div class="col-md-4 col-sm-12 col-xs-12" id="logo"><img src="../images/logo.png" alt="Your logo" class="img-responsive"></div>
+    <div class="col-md-5 col-md-offset-0 col-sm-8 col-sm-offset-1 col-xs-6" id="menu">
+      <nav class="navbar" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mmm" aria-expanded="false">
+            <span class='sr-only'>Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- <a href="/" class="navbar-brand">Brand</a> -->
+        </div>
+        <div class="collapse nav-collapse" id="mmm">
+          <ul class="nav navbar-nav" id="menu-items">
+            <li><a href="#">Home</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#offer-title">About</a></li>
+            <li><a href="#feeds">Contact</a></li>
+          </ul>
+        </div>
+
+      </nav>
+      <button class="btn btn-orange" id="blog">Blog</button>
+    </div>
+    <div class="col-md-3 col-sm-3 col-xs-6" id="search">
+      <form id="search-form" action="" method="post">
+        <input type="search" id="search-field" placeholder="Search" />
+        <input type="image" id="search-button" src="../images/search_icon.png" />
+      </form>
+    </div>
+  </header>
+  <div id="slider" class="col-md-12 col-sm-12 col-xs-12">
+    <div id="slide">
+      <p id="design">Good design is good business</p>
+      <p id="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies sagittis magnaa commodo.<br>
+  Ut eget eros mauris, ut cursus urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.</p>
+      <button class="btn btn-orange" id="learn">Learn More</button>
+    </div>
+    <button class="btn btn-blue" id="our_services">Our services</button>
   </div>
-  <button class="btn btn-blue" id="our_services">Our services</button>
-</div>
-<div id="c_background" class="col-md-12">
-  <div class="container col-md-12">
-    <div class="col-md-3" id="design">
-      <img src="../images/laptop.png" class="img-responsive" />
-      <h1>Web Design</h1>
-      <p>Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit.
-        Mauris nec ipsum at lacus
-        commodo suscipit. <a href="#">Details...</a>
-      </p>
-    </div>
-    <div class="col-md-3" id="optimization">
-      <img src="../images/search.png" class="img-responsive" />
-      <h1>Search Optimization</h1>
-      <p>Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit.
-        Mauris nec ipsum at lacus
-        commodo suscipit. <a href="#">Details...</a>
-      </p>
-    </div>
-    <div class="col-md-3" id="shop">
-      <img src="../images/cart.png" class="img-responsive" />
-      <h1>Online Shop</h1>
-      <p>Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit.
-        Mauris nec ipsum at lacus
-        commodo suscipit. <a href="#">Details...</a>
-      </p>
-    </div>
-    <div class="col-md-3" id="media">
-      <img src="../images/like.png" class="img-responsive" />
-      <h1>Social Media</h1>
-      <p>Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit.
-        Mauris nec ipsum at lacus
-        commodo suscipit. <a href="#">Details...</a>
-      </p>
+  <div id="c_background" class="col-md-12 col-sm-12 col-xs-12">
+    <div class="container col-md-12 col-sm-12">
+      <div class="col-md-3 col-sm-6 col-xs-12">
+        <img src="../images/laptop.png" class="img-responsive" />
+        <h2>Web Design</h2>
+        <p>Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit.
+          Mauris nec ipsum at lacus
+          commodo suscipit. <a href="#">Details...</a>
+        </p>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12">
+        <img src="../images/search.png" class="img-responsive" />
+        <h2>Search Optimization</h2>
+        <p>Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit.
+          Mauris nec ipsum at lacus
+          commodo suscipit. <a href="#">Details...</a>
+        </p>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12">
+        <img src="../images/cart.png" class="img-responsive" />
+        <h2>Online Shop</h2>
+        <p>Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit.
+          Mauris nec ipsum at lacus
+          commodo suscipit. <a href="#">Details...</a>
+        </p>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12">
+        <img src="../images/like.png" class="img-responsive" />
+        <h2>Social Media</h2>
+        <p>Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit.
+          Mauris nec ipsum at lacus
+          commodo suscipit. <a href="#">Details...</a>
+        </p>
+      </div>
     </div>
   </div>
-</div>
+  <div id="c_background2" class="col-md-12 col-sm-12 col-xs-12">
+    <div class="container col-md-12">
+      <div id="portfolio">
+        <h1>Our Portfolio Awesome</h1>
+        <button class="btn btn-blue" id="more_works">More Works</button>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12 pic-cont">
+        <img src="../images/camera.png" class="img-responsive pics" id="instapic0" />
+        <h2>Lorem Ipsum Dolar Sit Amet</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Mauris nec ipsum at lacus commodo suscipit.
+        </p>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12 pic-cont">
+        <img src="../images/camera.png" class="img-responsive pics" id="instapic1" />
+        <h2>Lorem Ipsum</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscinglit.
+        </p>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12 pic-cont">
+        <img src="../images/camera.png" class="img-responsive pics" id="instapic2" />
+        <h2>Ipsum Amet Dolar Sit</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing
+          elitmauris nec ipsum at lacus commodo suscipit.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div id="c_background3" class="col-md-12 col-sm-12 col-xs-12">
+    <div class="container col-md-12">
+      <div id="offer">
+        <p id="offer-title">What we offer</p>
+        <p id="offer-post">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies sagittis magnaa commodo. Ut eget eros mauris, ut cursus urna.<br>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.
+        </p>
+        <div class="col-md-3 col-sm-6 col-xs-12 owb">
+          <h2>Web Design</h2>
+          <p class="offer-block">Lorem ipsum dolor sit amet, consect etur adipiscing elit. Ut ultricies sagit tism agnaa commodo. Ut eget eros mauris, ut cursus urna vestibuluman ipsum primis in faucibus orci luctuset. <button id="details_1" class="btn btn-blue">Details...</button>
+          </p>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12 offers">
+          <h2>Search Optimization</h2>
+          <p class="offer-block">Lorem ipsum dolor sit amet, consect etur adipiscing elit. Ut ultricies sagit tism agnaa commodo. Ut eget eros mauris, ut cursus urna vestibuluman ipsum primis in faucibus <a id="details_2" href="#">Details...</a>
+          </p>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12 owb">
+          <h2>Online Shop</h2>
+          <p class="offer-block">Lorem ipsum dolor sit amet, consect etur adipiscing elit. Ut ultricies sagit tism agnaa commodo. Ut eget eros mauris, ut cursus urna vestibuluman ipsum primis in faucibus orci luctuset. <button id="details_3" class="btn btn-blue">Details...</button>
+          </p>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12 offers">
+          <h2>Social Media</h2>
+          <p class="offer-block">Lorem ipsum dolor sit amet, consect etur adipiscing elit. Ut ultricies sagit tism agnaa commodo. Ut eget eros mauris, ut cursus urna vestibuluman ipsum primis in faucibus orci luc <a id="details_4" href="#">>>></a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="col-md-12 col-sm-12 col-xs-12">
+    <div class="container col-md-12 col-sm-12">
+      <div class="col-md-3 col-sm-6 col-xs-12 footer_block" id="feeds">
+        <h1>Twitter feeds</h1>
+        <p>
+          Check out this great them item
+          <a href="http://tadjalskfj.com">http://tadjalskfj.com</a>
+          2 weeks ago
+        </p>
+        <p>
+          Check out this great them item for
+          <a href="http://tadjalskfj.com">http://tadjalskfj.com</a>
+          2 weeks ago
+        </p>
+        <p>
+          Check out this great them item for you
+          <a href="http://tadjalskfj.com">http://tadjalskfj.com</a>
+          2 weeks ago
+        </p>
+      </div>
+      <div class="col-md-4 col-md-offset-0 col-sm-5 col-sm-offset-1 col-xs-12 footer_block" id="newsletter">
+        <h1>Newsletter</h1>
+        <p id="news">
+          Lorem ipsum dolor sit amet, consectetur adip iscing elit. Ut ultricies sagittis magna a comm. Ut eget eros mauris, ut cursus urna.
+        </p>
+      </div>
+      <div class="col-md-3 col-sm-6 col-xs-12 footer_block" id="recent">
+        <h1>Recent projects</h1>
+        <div class="square"></div>
+        <p>
+          Sketchy Business Card
+          <a href="http://tadjalskfj.com">http://tadjalskfj.com</a>
+          2 weeks ago
+        </p>
+        <div class="square"></div>
+        <p>
+          Message Boards in Nature
+          <a href="http://tadjalskfj.com">http://tadjalskfj.com</a>
+          2 weeks ago
+        </p>
+        <div class="square"></div>
+        <p>
+          Website Design Kit
+          <a href="http://tadjalskfj.com">http://tadjalskfj.com</a>
+          2 weeks ago
+        </p>
+      </div>
+      <div class="col-md-2 col-md-offset-0 col-sm-5 col-sm-offset-1 col-xs-12 footer_block">
+        <h1>Contact</h1>
+        <div id="phone"></div>
+        <p class="contacts">1-000-000-0000<br>1-000-000-0000</p>
+        <div id="cell_phone"></div>
+        <p class="contacts">1-000-000-0000<br>1-000-000-0000</p>
+        <div id="envelope"></div>
+        <p class="contacts">abcdefg@hijs.dfh<br>fjashfaf@jkfs.ckd</p>
+      </div>
+    </div>
+  </footer>
+  <script type="text/javascript">
+    var query = $.ajax({url: "https://api.instagram.com/v1/tags/linux/media/recent", method: "GET",
+      data: {client_id: "495ac0fa21fc437c9b1d65cfa400798f", count: 3}, dataType: "jsonp"})
+  .done(function(data) {
+    for (i=0; i < 3; i++) {
+      $('#instapic'+i).attr("src", data['data'][i]['images']['standard_resolution']['url']);
+    }
+  })
+  .fail(function() {
+    console.log( "picture request failed" );
+  })
+  .always(function() {
+    console.log( "picture request complete" );
+  });
+
+  </script>
 </body>
 </html>

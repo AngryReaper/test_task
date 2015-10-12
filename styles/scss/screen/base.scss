@@ -22,21 +22,12 @@ $text_color_black: #000;
   src: url('../../fonts/glyphicons-halflings-regular.woff2');
 }
 @font-face {
-  font-family: 'BreeSerif-Regular';
-  src: url('../../fonts/BreeSerif-Regular.otf');
-}
-@font-face {
   font-family: 'BebasNeue';
   src: url("../../fonts/BebasNeue-Regular.otf") format("opentype");
   font-weight: normal;
 }
-// @font-face {
-//   font-family: 'BebasNeue-Bold';
-//   src: url("../../fonts/bebasneue-bold-webfont.ttf") format("truetype");
-//   font-weight: bold;
-// }
 @font-face {
-  font-family: 'bebas_neuebold';
+  font-family: 'BebasNeue-Bold';
   src: url('../../fonts/bebasneue-bold-webfont.eot');
   src: url('../../fonts/bebasneue-bold-webfont.eot?#iefix') format('embedded-opentype'),
        url('../../fonts/bebasneue-bold-webfont.woff2') format('woff2'),
@@ -63,10 +54,18 @@ body {
 }
 
 .container {
-  width: 1000px;
   padding: 0;
   float: none;
   position: relative;
   margin: 0 auto;
   min-height: 100%;
+  @media screen and (min-width: 992px) {
+    width: 1000px;
+  }
+}
+
+.collapse {
+  @media screen and (min-width: 768px) {
+    display: inline-block;
+  }
 }

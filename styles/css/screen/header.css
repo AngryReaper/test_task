@@ -7,8 +7,38 @@
   background-color: #2190C1;
   color: #FFFFFF; }
 
+@media (max-width: 767px) {
+  .navbar {
+    position: absolute;
+    width: 70%;
+    top: 20%;
+    z-index: 11000; }
+
+  .navbar-nav {
+    margin: 0;
+    background-color: white; }
+
+  .navbar-header {
+    float: none; }
+
+  .navbar-toggle {
+    margin-left: 2%;
+    display: block;
+    float: left;
+    background-color: #F98468; }
+    .navbar-toggle .icon-bar {
+      background-color: white; }
+
+  .navbar-nav > li {
+    float: none !important;
+    display: block;
+    line-height: 40px !important;
+    margin-left: 5%; }
+
+  .navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px; } }
 header {
-  height: 81px;
   padding: 0 !important;
   border-bottom: 1px solid #d7d9da;
   font-family: 'Ubuntu', Verdana, serif;
@@ -19,18 +49,32 @@ header {
       margin: 0 auto; }
   header #menu {
     padding: 0;
-    height: inherit; }
-    header #menu #menu-items li {
-      float: left;
-      width: 13%;
-      margin-right: 5%;
-      text-align: center;
-      line-height: 81px;
-      font-size: 0.9em; }
-      header #menu #menu-items li:hover {
-        color: #C5F4FF;
-        background: url("../../images/menu_hover.png") no-repeat;
-        background-size: 100% 100%; }
+    height: 81px; }
+    header #menu .navbar .collapse {
+      width: 100%;
+      padding: 0; }
+      header #menu .navbar .collapse #menu-items {
+        float: none; }
+        header #menu .navbar .collapse #menu-items li {
+          float: left;
+          width: 13%;
+          margin-right: 5%;
+          text-align: center;
+          line-height: 81px;
+          font-size: 0.9em; }
+          header #menu .navbar .collapse #menu-items li:hover {
+            color: #C5F4FF;
+            background: url("../../images/menu_hover.png") no-repeat;
+            background-size: 100% 100%; }
+            header #menu .navbar .collapse #menu-items li:hover a {
+              color: #C5F4FF; }
+          header #menu .navbar .collapse #menu-items li a {
+            padding: 0;
+            display: inline-block;
+            color: #555C64;
+            text-decoration: none; }
+            header #menu .navbar .collapse #menu-items li a:hover {
+              background: url("../../images/menu_hover.png") no-repeat; }
     header #menu #blog {
       position: absolute;
       width: 64px;
@@ -38,7 +82,11 @@ header {
       margin: 0 4% 0 4%;
       padding: 0;
       top: 50%;
+      left: 72%;
       transform: translateY(-50%); }
+      @media screen and (max-width: 767px) {
+        header #menu #blog {
+          left: 50%; } }
   header #search {
     position: relative;
     padding: 0;

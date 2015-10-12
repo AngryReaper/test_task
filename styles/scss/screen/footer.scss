@@ -1,0 +1,79 @@
+$text_color_orange_0: #F98468;
+$text_color_gray_4: #848B91;
+$text_color_blue_6: #2190C1;
+$color_blue_1: #2E3E4D;
+$color_gray_1: #556270;
+footer {
+  background-color: $color_blue_1;
+  .footer_block {
+    padding-right: 0;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      height: 280px;
+    }
+    h1 {
+
+      margin-bottom: 0.5em;
+      color: $text_color_orange_0;
+      text-transform: uppercase;
+      font-size: 2em;
+      font-family: 'BebasNeue','DIN Condensed','Ubuntu Condensed', serif;
+    }
+    p {
+      color: $text_color_gray_1;
+      font-size: 0.8em;
+      font-family: 'Ubuntu', Verdana, serif;
+      border-bottom: 1px solid $color_gray_1;
+      padding: 0.8em 0 0.8em;
+      a {
+        display: block;
+        color: $text_color_blue_6;
+        text-decoration: none;
+      }
+      &:last-child {
+        border: none;
+      }
+    }
+    #news {
+      border-bottom: 1px solid $color_gray_1;
+    }
+    .square {
+      height: 60px;
+      width: 60px;
+      background-color: white;
+      float: left;
+      margin-top: 0.8em;
+      margin-right: 0.8em;
+    }
+    .contacts {
+      padding-bottom: 1em;
+      border: none;
+    }
+    #phone, #cell_phone, #envelope {
+      width: 45px;
+      height: 45px;
+      float: left;
+      margin-top: 0.4em;
+      margin-right: 0.2em;
+    }
+    #phone {
+      background: url("../../images/phone.png");
+    }
+    #cell_phone {
+      background: url("../../images/cell_phone.png");
+    }
+    #envelope {
+      background: url("../../images/envelope.png");
+    }
+  }
+  #feeds {
+    padding-right: 10px;
+  }
+  #newsletter {
+    padding-right: 45px;
+  }
+  #recent {
+    padding-left: 0;
+  }
+}
